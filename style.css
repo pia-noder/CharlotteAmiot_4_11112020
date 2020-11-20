@@ -114,7 +114,9 @@ a:hover {
 .d-bloc .icon-semi-rounded-b {
     border-color: rgba(255, 255, 255, .9);
 }
-
+blockquote footer{
+    color: #293241;
+}
 .d-bloc .divider-h span {
     border-color: rgba(255, 255, 255, .2);
 }
