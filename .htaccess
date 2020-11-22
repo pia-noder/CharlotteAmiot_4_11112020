@@ -3,6 +3,8 @@
 #l'en-tête cache n'est pas valide sur les anciens navigateurs
 
 # BEGIN Cache-Control Headers
+a2enmod headers
+/etc/init.d/apache2 restart
 <IfModule mod_headers.c>
 <FilesMatch "\.(ico|jpe?g|png|gif|swf|css|gz)$">
 Header set Cache-Control "max-age=2592000, public"
@@ -20,6 +22,9 @@ Header unset Cache-Control
 </IfModule>
 # END Cache-Control Headers
 
+a2enmod expires
+
+/etc/init.d/apache2 restart
 # BEGIN Expires Headers
 <IfModule mod_expires.c>
 ExpiresActive On
